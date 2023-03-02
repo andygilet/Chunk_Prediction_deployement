@@ -6,6 +6,7 @@ from ressources.entries_treatment import treat_information
 from ressources.insurance_calculation import calculate_client_value
 
 import pickle
+import sklearn
 
 app = Flask(__name__, template_folder='templates', static_folder='templates/assets')
 app.config['SECRET_KEY'] = 'ValeureuxLiegeois'

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>W3.CSS Template</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+        <style>
+            body, html {height: 100%; font-family: "Inconsolata", sans-serif;}
+            .bgimg {background-position: center; background-size: cover; background-image: url("/w3images/coffeehouse.jpg"); min-height: 75%;}
+            .menu {display: none;}
+        </style>
+    </head>
+    <body>
+        <!-- Links (sit on top) -->
+        <div class="w3-top">
+            <div class="w3-row w3-padding w3-black">
+                <div class="w3-col s3">
+                    <a href="http://localhost:5000/home" class="w3-button w3-block w3-black">PREDICTION</a>
+                </div>
+                <div class="w3-col s3">
+                    <a href="http://localhost:5000/Dashboard" class="w3-button w3-block w3-black">DASHBOARD</a>
+                </div>
+                <div class="w3-col s3">
+                    <a href="http://localhost:5000/Contributors" class="w3-button w3-block w3-black">CONTRIBUTORS</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add a background color and large text to the whole page -->
+        <div class="w3-sand w3-grayscale w3-large">
+
+            <!-- Contact/Area Container -->
+            <div class="w3-container" id="where" style="padding-bottom:32px;">
+                <div class="w3-content" style="max-width:700px">
+                    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">ENTER THE CLIENT DATA</span></h5>
+                    <form method="post" action="">
+                        <p><label>Client Number</label></p>
+                        {{form.client_number}}          
+                        <p><label>Total relationship count</label></p>
+                        {{form.total_relationship_count}}       
+                        <p><label>Number of months inactive</label></p>
+                        {{form.months_inactive}}             
+                        <p><label>Number of contacts</label></p>
+                        {{form.contacts_count}}
+                        <p><label>Total revolving balance</label></p>
+                        {{form.total_revolving_bal}}
+                        <p><label>Total amount change</label></p>
+                        {{form.total_amt_chng}}
+                        <p><label>Total transaction amount</label></p>
+                        {{form.total_trans_amt}}
+                        <p><label>Total transaction counts</label></p>
+                        {{form.total_trans_ct}}
+                        <p><label>Total count change</label></p>
+                        {{form.total_ct_chng}}
+                        <p><label>Average utilization ratio</label></p>
+                        {{form.avg_utilization_ratio}}
+                        <p>{{form.submit}}</p>
+                    </form>
+                </div>
+            </div>
+            <hr>
+
+            <!-- About Container -->
+            <div class="w3-container" id="about">
+                <div class="w3-content" style="max-width:700px">
+                    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">CHURNING PREDICTION</span></h5>
+                    <p>{{result_prediction}}</p>
+                </div>
+            </div>
+
+            <div class="w3-container" id="about">
+                <div class="w3-content" style="max-width:700px">
+                    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">VALUE OF THE CLIENT</span></h5>
+                    <p>{{result_crossdata}}</p>
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>
